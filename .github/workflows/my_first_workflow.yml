@@ -7,6 +7,6 @@ jobs:
      - name: Greetings
        run: echo "Hello World!"
      - name: Explore Runner
-       run: lscpu && free -m && df -h+
+       run: lscpu && free -m && df -h
      - name: Explore Directories
        run: ls -l /mnt && du -sh /mnt && ls -l / && du -sh /
