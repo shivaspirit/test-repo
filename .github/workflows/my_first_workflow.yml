@@ -4,9 +4,23 @@ jobs:
   my_first_job:
     runs-on: ubuntu-latest
     steps:
-     - name: Greetings
-       run: echo "Hello World!"
-     - name: Explore Runner
-       run: lscpu && free -m && df -h
-     - name: Explore Directories
-       run: ls -l /mnt && du -sh /mnt && ls -l / && du -sh /
+     - name: Greetings And Explore Runner
+       run: |
+            echo "Hello World!"
+            echo
+            echo "***********CPU Details**********"
+            lscpu
+            echo "***********End Of CPU Details***********"
+            echo
+            echo "***********Memory Details**********"
+            free -m
+            echo "***********End Of Memory Details***********"
+            echo
+            echo "***********Storage Details**********"
+            lsblk
+            df -h
+            echo "***********End Of Storage Details***********"
+            echo
+            whoami
+      
+
